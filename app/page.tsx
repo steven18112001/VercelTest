@@ -6,7 +6,7 @@ function App() {
   const [home, setHome] = useState("");
 
   useEffect(() => {
-    fetch("http://test.shipquickfba.com/home")
+    fetch("https://test.shipquickfba.com/home")
       .then((response) => response.json())
       .then((data) => setHome(data))
       .catch((error) => console.error(error));
@@ -15,7 +15,7 @@ function App() {
   async function postName(e: { preventDefault: () => void; }) {
     e.preventDefault();
     try {
-      await fetch("http://test.shipquickfba.com/post_name", {
+      await fetch("https://test.shipquickfba.com/post_name", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
